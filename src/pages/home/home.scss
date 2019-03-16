@@ -28,8 +28,9 @@
 		}
 
 		.trash {
-			animation: crossTransition 0.75s cubic-bezier(0.25, 0.79, 0.41, 1.15);
-			animation-fill-mode: forwards;
+			// animation: crossTransition 0.75s cubic-bezier(0.25, 0.79, 0.41, 1.15);
+			// animation-fill-mode: forwards;
+			clip-path: url(#clipping);
 		}
 
 	}

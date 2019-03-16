@@ -1,0 +1,21 @@
+flip-card {
+    width: 33%;
+    height: 49%;
+    overflow: hidden;
+    &.opened{
+        position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #0384f5;
+    opacity: 0;
+    }
+    .card-container{
+        width: 100%;
+        height: 100%;
+    }
+    .card-container-body{
+        position: absolute;
+    }
+}

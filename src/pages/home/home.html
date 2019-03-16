@@ -1,20 +1,80 @@
 <ion-header no-border>
-	<ion-navbar color="light">
-		<ion-title>
-		  Bulk Delete
-		</ion-title>
-		<ion-buttons right>
-			<button ion-button icon-only><ion-icon name="trash"></ion-icon></button>
-		</ion-buttons>
-	</ion-navbar>
+  <ion-navbar color="light">
+    <ion-title>
+      Bulk Delete
+    </ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="cards()">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
 </ion-header>
 
 <ion-content>
+    <!-- <svg class="svg-graphic" width="180" height="200" viewBox="0 0 560 645" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" version="1.1">
+      <g>
+         <clipPath id="hex-mask">
+              <polygon points="270,0 0,160 0,485 270,645 560,485 560,160"></polygon>
+          </clipPath>
+     </g>
+     
+     <a xlink:href="#" transform="">
+          <image clip-path="url(#hex-mask)" height="100%" width="100%" xlink:href="https://images.unsplash.com/photo-1487530811176-3780de880c2d" preserveAspectRatio="xMidYMin slice"></image>
+          <figcaption></figcaption>
+     </a>
+      
 
-	<ion-list no-lines>
-		<button detail-none ion-item *ngFor="let image of images" (click)="toggleImageDelete(image)">
-			<img [class.trash]="image.toBeDeleted" [src]="image.imagePath" />
-		</button>
-	</ion-list>
-
+  </svg> -->
+  <ion-list no-lines>
+    <button detail-none ion-item *ngFor="let image of images" (click)="toggleImageDelete(image)">
+      <img [class.trash]="image.toBeDeleted" [src]="image.imagePath" />
+    </button>
+  </ion-list>
+  <svg class="svg-defs" width="180" height="200" viewBox="0 0 560 645">
+      <defs>
+            <clipPath id="clipping">
+              <polygon points="270,0 0,160 0,485 270,645 560,485 560,160" />
+              <polygon points="270,0 0,160 0,485 270,645 560,485 560,160"></polygon>
+              <!-- <polygon id="Star-1" points="98.4999978 153.75 38.2520165 185.424245 49.7583542 118.337123 1.01670635 70.8257603 68.3760155 61.037872 98.5000012 1.1379786e-14 128.624005 61.0378871 195.98331 70.8258091 147.241642 118.337136 158.747982 185.424247"/> -->
+              <text x="0" y="3.2em">Text</text>
+            </clipPath>
+            
+            <linearGradient id="gradient" x1="0" y1="0" x2 ="110%" y2="0%">
+              <stop stop-color="#fff" offset="0"/><stop stop-color="#fff" offset="10%"/>
+              <stop stop-color="#AAA" offset="10%"/><stop stop-color="#AAA" offset="20%"/>
+              <stop stop-color="#777" offset="20%"/><stop stop-color="#777" offset="30%"/>
+              <stop stop-color="#333" offset="30%"/><stop stop-color="#333" offset="40%"/>
+              <stop stop-color="#000" offset="40%"/><stop stop-color="#000" offset="50%"/>
+              <stop stop-color="#fff" offset="50%"/><stop stop-color="#fff" offset="60%"/>
+              <stop stop-color="#AAA" offset="60%"/><stop stop-color="#AAA" offset="70%"/>
+              <stop stop-color="#777" offset="70%"/><stop stop-color="#777" offset="80%"/>
+              <stop stop-color="#333" offset="80%"/><stop stop-color="#333" offset="90%"/>
+              <stop stop-color="#000" offset="90%"/><stop stop-color="#000" offset="100%"/>
+            </linearGradient>
+        
+            <mask id="masking" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+              <rect y="0" width="1" height="1" fill="url(#gradient)" />
+              <circle cx=".5" cy=".5" r=".42" fill="black" />
+              
+              <circle cx="0" cy=".5" r=".32" fill="black" />
+              <circle cx="1" cy=".5" r=".32" fill="black" />
+              
+              <circle cx="0" cy=".5" r=".3" fill="gray" />
+              <circle cx=".5" cy=".5" r=".4" fill="gray" />
+              <circle cx="1" cy=".5" r=".3" fill="gray" />
+              
+              <circle cx="0" cy=".5" r=".25" fill="white" />
+              <circle cx=".5" cy=".5" r=".35" fill="white" />
+              <circle cx="1" cy=".5" r=".25" fill="white" />
+            </mask>
+        
+            <pattern id="pattern" 
+                     patternUnits="userSpaceOnUse"
+                     width="200" height="300" 
+                     viewbox="0 0 200 300">
+              <image xlink:href="https://img-fotki.yandex.ru/get/5607/5091629.6b/0_612e6_b9039c0d_M.jpg" width="200" height="300" />
+            </pattern>
+       </defs>
+    </svg>
 </ion-content>

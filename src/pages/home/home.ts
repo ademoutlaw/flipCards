@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { CardsPage } from '../cards/cards';
 
 @Component({
   selector: 'page-home',
@@ -13,12 +14,7 @@ export class HomePage {
 
 		this.images = [
 			{imagePath: 'https://images.unsplash.com/photo-1487530811176-3780de880c2d', toBeDeleted: false},
-			{imagePath: 'https://images.unsplash.com/photo-1498454056553-879ad1baf5dc', toBeDeleted: false},
-			{imagePath: 'https://images.unsplash.com/photo-1498078675142-85259d452c6b', toBeDeleted: false},
-			{imagePath: 'https://images.unsplash.com/photo-1495121864268-11b119abeba0', toBeDeleted: false},
-			{imagePath: 'https://images.unsplash.com/photo-1495904786722-d2b5a19a8535', toBeDeleted: false},
-			{imagePath: 'https://images.unsplash.com/photo-1485110168560-69d4ac37b23e', toBeDeleted: false},
-			{imagePath: 'https://images.unsplash.com/photo-1492934867615-2a451e01c063', toBeDeleted: false}
+			{imagePath: 'https://images.unsplash.com/photo-1498454056553-879ad1baf5dc', toBeDeleted: false}
 		];
 
 	}
@@ -26,5 +22,7 @@ export class HomePage {
 	toggleImageDelete(image){
 		image.toBeDeleted = !image.toBeDeleted;
 	}
-
+	cards(){
+		this.navCtrl.push(CardsPage);
+	}
 }
