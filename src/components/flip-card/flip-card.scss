@@ -17,5 +17,8 @@ flip-card {
     }
     .card-container-body{
         position: absolute;
+    overflow: hidden;
+    transition: 800ms;
+    z-index: 1;
     }
 }
